@@ -33,6 +33,8 @@ export const treatments: Treatment[] = [
     blurb: "Brighten the face, underarms, or bikini line.",
     promo: 99,
     was: 188,
+    image: "/gallery/studio-glow.jpg",
+    imageAlt: "A calm face with a soft glow during a facial",
   },
   {
     name: "Rejuran Skin Booster",
@@ -55,18 +57,24 @@ export const treatments: Treatment[] = [
     blurb: "Soften fine lines.",
     promo: 250,
     was: 500,
+    image: "/gallery/studio-brows.jpg",
+    imageAlt: "A soft portrait with a rested expression",
   },
   {
     name: "Eyebag Treatment",
     blurb: "Look fresher around the eyes.",
     promo: 388,
     was: 588,
+    image: "/gallery/studio-eyes.jpg",
+    imageAlt: "Close view of closed eyes and smooth skin",
   },
   {
     name: "HiRF Treatment",
     blurb: "Radio-frequency face lift with a lifted look right after the session. A step on from HIFU.",
     promo: 388,
     was: 800,
+    image: "/gallery/studio-lift.jpg",
+    imageAlt: "A radiofrequency handpiece used along the cheek",
   },
   {
     name: "Rejuran Glow",
@@ -105,7 +113,20 @@ export const treatments: Treatment[] = [
     blurb: "Removal across the full face or neck.",
     promo: 188,
     was: 388,
+    image: "/gallery/studio-hands.jpg",
+    imageAlt: "A facial along the jaw and neck",
   },
+];
+
+export const studio = [
+  { src: "/gallery/studio-room.jpg", alt: "Sunlit treatment room with a navy curtain and a single rose", caption: "The room" },
+  { src: "/gallery/studio-glow.jpg", alt: "Woman resting with a pink headband and glowing skin", caption: "Glow" },
+  { src: "/gallery/studio-cups.jpg", alt: "Glass cupping cups styled with linen and a blush towel", caption: "Cupping" },
+  { src: "/gallery/studio-lift.jpg", alt: "Radiofrequency treatment beside a navy curtain", caption: "Lift" },
+  { src: "/gallery/studio-eyes.jpg", alt: "Close portrait of closed eyes", caption: "Eyes" },
+  { src: "/gallery/studio-brows.jpg", alt: "Portrait with shaped brows and a quiet smile", caption: "Brows" },
+  { src: "/gallery/studio-hands.jpg", alt: "Hands resting along the jaw during a facial", caption: "Facial" },
+  { src: "/gallery/studio-still.jpg", alt: "Rose, linen, and a glass dropper on marble", caption: "Still life" },
 ];
 
 export const gallery = [

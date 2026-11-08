@@ -1,4 +1,4 @@
-import { gallery, sgd, site, treatments, withBase } from "@/lib/site";
+import { gallery, sgd, site, studio, treatments, withBase } from "@/lib/site";
 
 const nav = [
   { href: "#menu", label: "Menu" },
@@ -68,13 +68,13 @@ export default function Home() {
             </a>
           </div>
           <figure className="hero-photo">
-            <img src={withBase("/gallery/profile.jpg")} alt="Client resting after a facial at the spa" />
-            <figcaption>Treatment room</figcaption>
+            <img src={withBase("/gallery/studio-room.jpg")} alt="Sunlit treatment room with a navy curtain, folded towel, and a single rose" />
+            <figcaption>The room</figcaption>
           </figure>
         </section>
 
-        <div className="film" aria-label="Treatment photos">
-          {gallery.slice(1, 5).map((shot) => (
+        <div className="film" aria-label="Studio photographs">
+          {studio.slice(1, 5).map((shot) => (
             <figure key={shot.src}>
               <img src={withBase(shot.src)} alt={shot.alt} />
               <figcaption>{shot.caption}</figcaption>
@@ -107,6 +107,18 @@ export default function Home() {
 
         <section className="gallery" id="gallery">
           <div className="section-title">
+            <h2>Lookbook</h2>
+            <p>Light, linen, and the treatments on the menu.</p>
+          </div>
+          <div className="studio-grid">
+            {studio.map((shot) => (
+              <figure key={shot.src}>
+                <img src={withBase(shot.src)} alt={shot.alt} />
+                <figcaption>{shot.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="section-title" style={{ marginTop: "2.5rem" }}>
             <h2>In the room</h2>
             <p>Sessions as they happen.</p>
           </div>
