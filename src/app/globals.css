@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-body: "Figtree", sans-serif;
   --porcelain: #f4efe8;
   --paper: #fbf8f4;
   --ink: #1c2430;
