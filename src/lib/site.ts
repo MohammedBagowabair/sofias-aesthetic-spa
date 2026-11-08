@@ -2,6 +2,8 @@ export const site = {
   name: "Sofia's Aesthetic Spa",
   phoneDisplay: "+65 8766 6949",
   phoneTel: "+6587666949",
+  address: "810 Geylang Road, #01-115 City Plaza, Singapore 409286",
+  maps: "https://www.google.com/maps/place/Sofia's+Aesthetic+Spa/@1.3148178,103.8934089,17z",
   whatsapp(treatment?: string) {
     const text = treatment
       ? `Hi Sofia's Aesthetic Spa, I would like to book ${treatment}.`
@@ -119,7 +121,8 @@ export const treatments: Treatment[] = [
 ];
 
 export const studio = [
-  { src: "/gallery/studio-room.jpg", alt: "Sunlit treatment room with a navy curtain and a single rose", caption: "The room" },
+  { src: "/gallery/shop.jpg", alt: "Sofia's Secret storefront at City Plaza, unit 01-115", caption: "The shop" },
+  { src: "/gallery/laser.jpg", alt: "Treatment in the spa room, with the laser and the bed", caption: "The room" },
   { src: "/gallery/studio-glow.jpg", alt: "Woman resting with a pink headband and glowing skin", caption: "Glow" },
   { src: "/gallery/studio-cups.jpg", alt: "Glass cupping cups styled with linen and a blush towel", caption: "Cupping" },
   { src: "/gallery/studio-lift.jpg", alt: "Radiofrequency treatment beside a navy curtain", caption: "Lift" },

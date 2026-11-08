@@ -68,8 +68,8 @@ export default function Home() {
             </a>
           </div>
           <figure className="hero-photo">
-            <img src={withBase("/gallery/studio-room.jpg")} alt="Sunlit treatment room with a navy curtain, folded towel, and a single rose" />
-            <figcaption>The room</figcaption>
+            <img src={withBase("/gallery/shop.jpg")} alt="Sofia's Secret at 810 Geylang Road, City Plaza unit 01-115" />
+            <figcaption>City Plaza · #01-115</figcaption>
           </figure>
         </section>
 
@@ -87,22 +87,25 @@ export default function Home() {
             <h2>The menu</h2>
             <p>Promo price beside the usual price. All in SGD.</p>
           </div>
-          {treatments.map((item) => (
-            <article key={item.name} className={item.image ? "treatment has-photo" : "treatment"}>
-              {item.image ? <img src={withBase(item.image)} alt={item.imageAlt ?? item.name} /> : null}
-              <div>
-                <h3>{item.name}</h3>
-                <p className="blurb">{item.blurb}</p>
-              </div>
-              <div className="prices">
-                <span className="promo">{sgd(item.promo)}</span>
-                <span className="was">{sgd(item.was)}</span>
-              </div>
-              <a className="mini-book" href={site.whatsapp(item.name)}>
-                Book
-              </a>
-            </article>
-          ))}
+          <p className="swipe-hint">Swipe across the treatments</p>
+          <div className="menu-rail">
+            {treatments.map((item) => (
+              <article key={item.name} className={item.image ? "treatment has-photo" : "treatment"}>
+                {item.image ? <img src={withBase(item.image)} alt={item.imageAlt ?? item.name} /> : null}
+                <div>
+                  <h3>{item.name}</h3>
+                  <p className="blurb">{item.blurb}</p>
+                </div>
+                <div className="prices">
+                  <span className="promo">{sgd(item.promo)}</span>
+                  <span className="was">{sgd(item.was)}</span>
+                </div>
+                <a className="mini-book" href={site.whatsapp(item.name)}>
+                  Book
+                </a>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="gallery" id="gallery">
@@ -137,8 +140,11 @@ export default function Home() {
             <div>
               <h2>Book a time</h2>
               <p>
-                Tell us which treatment you want. We confirm the slot on WhatsApp. The number is {site.phoneDisplay}.
+                {site.address}. Tell us which treatment you want and we confirm the time on WhatsApp.
               </p>
+              <a className="maps-link" href={site.maps}>
+                Open in Google Maps
+              </a>
             </div>
             <div style={{ display: "grid", gap: "0.7rem", justifyItems: "start" }}>
               <a className="phone-link" href={`tel:${site.phoneTel}`}>
